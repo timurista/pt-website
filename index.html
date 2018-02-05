@@ -11,8 +11,163 @@
   </head>
   <body>
     <div class="header">
-      <img src="cristina-profile-picture" />
+      <h1>Dr Cristina Baracmonte</h1>
     </div>
+    <div class="body-container">
+    <!-- 3 banner images -->
+    <div class="sidebar">
+        <img class="main" src="cristina-bracamonte.jpg" />
+    </div>
+    <div class="subbanner">
+
+      <h1>Schedule A Visit</h1>
+      <form id="form" enctype="text/plain">
+        <labeL for="firstname">First Name</labeL>
+        <input type="text" name="firstname" placeholder="First Name" type="required">
+        <labeL for="lastname" >Last Name</labeL>
+        <input type="text" name="lastname" placeholder="Last Name" type="required">
+        <label for="date">Date &amp; Time</labeL>
+        <input id="date" type="date" step="1" placeholder="5:30 AM">
+        <input type="submit" value="Schedule Now">        
+      </form>
+    </div>
+  </div>
 
   </body>
+  <script>
+function processForm(e) {
+  if (e.preventDefault) e.preventDefault();
+
+  console.log(e.action, e.target.action);
+  /* do what you want with the form */
+
+  var firstName = e.target[0].value;
+  var lastName = e.target[1].value;
+  var date = e.target[2].value;
+
+  var cristinasEmail = 'cristinaruns2@gmail.com';
+  var body = 'at ' + date;
+  var subject = firstName + ' ' + lastName + ' requests an appointment';
+  console.log(body);
+  window.location.href = 'mailto:'+ cristinasEmail   +'?subject= ' + subject + '&body=' + body;
+  return false;
+}
+
+var form = document.getElementById('form');
+if (form.attachEvent) {
+  form.attachEvent("submit", processForm);
+} else {
+  form.addEventListener("submit", processForm);
+}
+
+  </script>
+  <style>
+      :root {
+      --midnight: #08203A;
+      --dark-blue: #133B6B;
+      --blue: #758DA6;
+      --light-blue: #A9B8C5;
+    }
+    body {
+      margin: 0;
+      font-size: 16px;
+      background: #e6e5e6;
+      font-family: sans-serif;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    .nav-container {
+      position: absolute;
+      top: 0;
+    
+    }
+    nav {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+    .body-container {
+      margin: 0 auto;
+      max-width: 800px;
+      background: white;
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 16rem;
+    }
+
+  .sidebar {
+      padding-right: 4rem;
+    }
+
+    .subbanner {
+      background: white;
+      justify-content: center;
+      flex: 2;
+    }      
+    #form {
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      flex-grow: 2;
+    }
+    .services-container {
+      display: flex;
+
+    }
+    .service {
+        padding: 1rem 2rem;
+      }
+
+    .header {
+      display: flex;
+      /* background-color: var(--blue);  */
+      justify-content: center;
+      background: linear-gradient(var(--light-blue), var(--blue));
+
+    }
+    .header h1 {
+      font-family: "Open Sans", sans-serif;
+      margin-top: 8rem;
+      color: white;
+
+    }
+    img.main {
+      width: 240px;
+    }
+
+    input {
+      padding: .5rem 1rem;
+      border-radius: .25rem;
+      border: 1px solid var(--light-blue);
+      max-width: 250px;
+      font-size: 16px;
+    }
+
+    input:focus {
+      border-color: orange;
+      outline: none;
+    }
+
+    label {
+      padding: .5rem 0;
+      font-size: 18px;
+    }
+
+    /*  form */
+    input[type="submit"] {
+      display: flex;
+      border-radius: 2px;
+      padding: .5rem 1.5rem;
+      color: white;
+      background-color: var(--blue);
+      justify-content: center;
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      opacity: 0.8;
+    }
+  </style>
 </html>
