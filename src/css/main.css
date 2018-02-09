@@ -106,7 +106,6 @@ input {
   padding: .5rem 1rem;
   border-radius: .25rem;
   border: 1px solid var(--light-blue);
-  max-width: 250px;
   font-size: 16px;
   height: 2rem;
 }
@@ -131,7 +130,7 @@ input[type="submit"] {
   display: -ms-flexbox;
   display: flex;
   border-radius: 2px;
-  padding: .5rem 1.5rem;
+  line-height: 1rem;
   color: white;
   background-color: var(--blue);
   -webkit-box-pack: center;
@@ -139,6 +138,9 @@ input[type="submit"] {
           justify-content: center;
   margin-top: 2rem;
   cursor: pointer;
+  height: 2.5rem;
+  text-transform: uppercase;
+  max-width: 12rem;
 }
 input[type="submit"]:hover {
   opacity: 0.8;
@@ -158,6 +160,10 @@ input[type="submit"]:hover {
       -ms-flex-pack: center;
           justify-content: center;
   }
+  .sidebar {
+    padding: 0;
+    text-align: center;
+  }
   .header {
     display: block;
     text-align: center;
@@ -165,6 +171,14 @@ input[type="submit"]:hover {
     font-size: .75rem;
   }
   .header h1 {
-    margin-top: 0;
+    margin-top: 0;  
+  }
+  .subbanner h1 {
+    margin-top: 1rem;
+    text-align: center;  
+  }
+  .subbanner {
+    max-width: 500px;
+    margin: 0 auto;
   }
 }

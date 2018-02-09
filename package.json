@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development parcel src/index.html",
-    "prod": "rm -rf ./dist && NODE_ENV=production parcel build src/index.html --public-url ./",
+    "s3":"aws s3 sync ./dist s3://cristina-bracamonte-pt-online",
+    "build": "rm -rf ./dist && NODE_ENV=production parcel build src/index.html --public-url ./",
+    "prod": "npm run build && npm run s3",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
