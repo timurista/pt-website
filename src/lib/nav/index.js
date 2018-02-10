@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const TopNav= styled.nav`
-  padding: 30px;
+  padding: 16px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;

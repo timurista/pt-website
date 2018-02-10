@@ -9,7 +9,7 @@ export const PageSection = styled.div`
 `;
 
 export const Container = styled.div`
-  padding: 30px;
+  padding: 32px;
   background-color: #fefefe;
 
   @media only screen and (min-width: 800px) {
