@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './css/main.css';
 import profileImg from './images/cristina-bracamonte.jpg';
+import DatePicker from './lib/DatePicker';
 
 export default class App extends Component {
   render() {
@@ -21,7 +22,7 @@ export default class App extends Component {
               <label for="lastname" >Last Name</label>
               <input type="text" name="lastname" placeholder="Last Name" type="required" />
               <label for="date">Date & Time</label>
-              <input id="date" type="date" step="1" placeholder="5:30 AM" />
+              <DatePicker />
               <input type="submit" value="Schedule Now" />
             </form>
           </div>
