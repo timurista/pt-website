@@ -63,6 +63,10 @@ const MainHeaderText = styled.span`
   letter-spacing: .125rem;
   flex: 1;
   padding-left: 16px;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `
 
 export default function Nav(props) {
